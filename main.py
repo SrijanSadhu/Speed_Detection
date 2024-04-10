@@ -8,14 +8,14 @@ import time
 speed_limit = int(input('Enter The Speed Limit: '))
 
 # Initialize the video
-cap = cv2.VideoCapture("Speed_Detection\Test1.mp4")
+cap = cv2.VideoCapture('Test1.mp4')
 lane_1_1 = []
 lane_1_2 = []
 
-mask1 = cv2.imread('D:\Robomanthan\Speed_Detection\m1.jpeg')
+mask1 = cv2.imread('m1.jpeg')
 mask1 = cv2.cvtColor(mask1, cv2.COLOR_BGR2GRAY)
 ret1, thresh_MASK_1 = cv2.threshold(mask1, 127, 255, cv2.THRESH_BINARY_INV)
-mask2 = cv2.imread('D:\Robomanthan\Speed_Detection\m2.jpeg')
+mask2 = cv2.imread('m2.jpeg')
 mask2 = cv2.cvtColor(mask2, cv2.COLOR_BGR2GRAY)
 ret2, thresh_MASK_2 = cv2.threshold(mask2, 127, 255, cv2.THRESH_BINARY_INV)
 
